@@ -1,0 +1,11 @@
+{
+  "title": "Haura Hanarissa Putri",
+  "description": "Education, student research, writing on Medium, and achievements — Haura Hanarissa Putri.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
