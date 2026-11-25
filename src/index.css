@@ -68,9 +68,9 @@
 .sruthi { right: 1.7vw; bottom: 6%; text-align: right; }
 .hero-label { position: absolute; z-index: 5; right: 11vw; top: 19%; color: var(--red); font: 13px var(--mono); opacity: 0; transform: translateY(12px); transition: opacity .6s .65s ease, transform .7s .65s var(--ease-out); }
 .motion-ready .hero-label { opacity: 1; transform: none; }
-.hero-art { --hero-rail: 24px; position: absolute; z-index: 3; left: calc(50% + var(--hero-rail)); bottom: 4%; width: min(48vw, 700px); height: 94%; display: flex; justify-content: center; align-items: flex-end; opacity: 0; transform: translateX(-50%) translateY(calc(12px + var(--my, 0px) + var(--hero-p) * 28px)) scale(.96); transition: opacity .8s .28s ease, transform 1.05s .28s var(--ease-out); will-change: transform; }
-.motion-ready .hero-art { opacity: 1; transform: translateX(-50%) translateY(calc(-2vh + var(--my, 0px) + var(--hero-p) * 28px)) scale(1.04); }
-.hero-photo { position: relative; z-index: 2; width: auto; height: min(90vh, 920px); max-width: 108%; object-fit: contain; object-position: center bottom; display: block; margin: 0 auto; transform: translateY(-2vh); }
+.hero-art { --hero-rail: 24px; position: absolute; z-index: 3; left: calc(50% + var(--hero-rail)); bottom: -2%; width: min(42vw, 600px); height: 86%; display: flex; justify-content: center; align-items: flex-end; opacity: 0; transform: translateX(-50%) translateY(calc(24px + var(--my, 0px) + var(--hero-p) * 26px)) scale(.95); transition: opacity .8s .28s ease, transform 1.05s .28s var(--ease-out); will-change: transform; }
+.motion-ready .hero-art { opacity: 1; transform: translateX(-50%) translateY(calc(var(--my, 0px) + var(--hero-p) * 26px)) scale(1); }
+.hero-photo { position: relative; z-index: 2; width: auto; height: min(78vh, 760px); max-width: 100%; object-fit: contain; object-position: center bottom; display: block; margin: 0 auto; }
 .hero-doodles { position: absolute; z-index: 3; left: 50%; bottom: 0; width: 100%; height: 100%; overflow: visible; fill: none; stroke: var(--red); stroke-width: 6; stroke-linecap: round; stroke-linejoin: round; pointer-events: none; transform: translateX(-50%) translate3d(0, calc(var(--hero-p) * -22px), 0); }
 .hero-doodles path { stroke-dasharray: 520; stroke-dashoffset: 520; transition: stroke-dashoffset 1.25s .65s var(--ease-in-out); }
 .motion-ready .hero-doodles path { stroke-dashoffset: 0; }
@@ -185,8 +185,8 @@ footer { padding: 10vh 4vw 3vh; min-height: 70vh; font: 11px/1.4 var(--mono); }
   .hero { height: 820px; min-height: 100svh; }
   .hero-word { font-size: clamp(80px, 27vw, 130px); }
   .hello { top: 17%; left: 4%; }.meet { bottom: 18%; left: 4%; }.sruthi { bottom: 5%; right: 2%; }
-  .hero-art { --hero-rail: 0px; width: 82vw; height: 78%; bottom: 12%; left: 50%; transform: translateX(-50%) translateY(-1vh); }
-  .hero-photo { height: min(74vh, 720px); transform: translateY(-1.5vh); }
+  .hero-art { --hero-rail: 0px; width: 74vw; height: 72%; bottom: 10%; left: 50%; transform: translateX(-50%); }
+  .hero-photo { height: min(66vh, 620px); }
   .hero-label { top: 30%; right: 4%; font-size: 10px; }
   .hero-role { right: 8%; bottom: 1.5%; width: 62vw; font-size: 9px; }
   .quote-section { min-height: 85svh; padding: 8vh 7vw; }

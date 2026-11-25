@@ -1,6 +1,9 @@
 {
   "rewrites": [
     { "source": "/medium-feed", "destination": "/api/medium-feed" },
-    { "source": "/(.*)", "destination": "/index.html" }
+    {
+      "source": "/((?!api/|assets/|medium-feed|favicon.png|robots.txt).*)",
+      "destination": "/index.html"
+    }
   ]
 }

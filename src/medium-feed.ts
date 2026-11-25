@@ -49,8 +49,16 @@ export function parseMediumFeed(xml: string): MediumPost[] {
   })
 }
 
+async function fetchMediumXml(): Promise<string> {
+  for (const path of ['/api/medium-feed', '/medium-feed']) {
+    const response = await fetch(path)
+    if (!response.ok) continue
+    const xml = await response.text()
+    if (xml.includes('<rss') || xml.includes('<channel>')) return xml
+  }
+  throw new Error('Medium feed failed')
+}
+
 export async function loadMediumPosts(): Promise<MediumPost[]> {
-  const response = await fetch('/medium-feed')
-  if (!response.ok) throw new Error('Medium feed failed')
-  return parseMediumFeed(await response.text())
+  return parseMediumFeed(await fetchMediumXml())
 }
