@@ -1,7 +1,7 @@
 "use client"
 
 import { BlurFade } from "@/components/ui/blur-fade"
-import { ComicText } from "@/components/ui/comic-text"
+import { TextAnimate } from "@/components/ui/text-animate"
 import { TypingAnimation } from "@/components/ui/typing-animation"
 import { NoteScribbles } from "@/components/scribbles"
 import { site } from "@/lib/site"
@@ -22,13 +22,18 @@ export function HandwrittenNote() {
         >
           a note from the lab
         </TypingAnimation>
-        <ComicText
-          fontSize={1.6}
-          className="!skew-x-[-4deg] leading-snug sm:!text-[2rem] md:!text-[2.4rem]"
+        <TextAnimate
+          as="p"
+          by="word"
+          animation="blurInUp"
+          once
+          className="font-note text-3xl leading-snug text-brand sm:text-4xl md:text-5xl"
         >
           {site.handwrittenNote}
-        </ComicText>
-        <p className="mt-10 font-mono text-sm text-ink/60">— {site.shortName}</p>
+        </TextAnimate>
+        <p className="mt-10 font-mono text-sm text-ink/60 dark:text-cream/60">
+          — {site.shortName}
+        </p>
       </BlurFade>
     </section>
   )

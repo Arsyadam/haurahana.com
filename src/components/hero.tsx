@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react"
 
-import { ComicText } from "@/components/ui/comic-text"
 import { Marquee } from "@/components/ui/marquee"
 import { PortraitScribbles } from "@/components/scribbles"
 import { site } from "@/lib/site"
@@ -12,10 +11,8 @@ export function Hero() {
   const [firstName, setFirstName] = useState("")
   const [editing, setEditing] = useState(false)
   const [showPortrait, setShowPortrait] = useState(false)
-  const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
-    setMounted(true)
     let cancelled = false
     const img = new window.Image()
     img.onload = () => {
@@ -48,20 +45,12 @@ export function Hero() {
       </div>
 
       <header className="mx-auto flex max-w-6xl items-center justify-between px-5 py-5 sm:px-8">
-        <div className="min-h-[2.2rem]" suppressHydrationWarning>
-          {mounted ? (
-            <ComicText fontSize={1.35} className="!skew-x-0 tracking-tight">
-              haura
-            </ComicText>
-          ) : (
-            <span
-              className="inline-block text-[1.35rem] font-black tracking-tight text-brand uppercase"
-              style={{ fontFamily: "Bangers, Impact, sans-serif" }}
-            >
-              haura
-            </span>
-          )}
-        </div>
+        <a
+          href="#top"
+          className="font-note text-3xl leading-none tracking-tight text-brand"
+        >
+          haura
+        </a>
         <a
           href="#about"
           className="font-mono text-xs tracking-[0.2em] text-brand uppercase underline-offset-4 hover:underline"

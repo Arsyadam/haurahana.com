@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import { Bangers, Geist, Geist_Mono } from "next/font/google"
+import { Caveat, Geist, Geist_Mono } from "next/font/google"
 
 import { ThemeProvider } from "@/components/theme-provider"
 import { site } from "@/lib/site"
@@ -16,10 +16,9 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 })
 
-const bangers = Bangers({
-  weight: "400",
+const caveat = Caveat({
   subsets: ["latin"],
-  variable: "--font-bangers",
+  variable: "--font-caveat",
 })
 
 export const metadata: Metadata = {
@@ -40,7 +39,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html
       lang="en"
       suppressHydrationWarning
-      className={`${geistSans.variable} ${geistMono.variable} ${bangers.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} ${caveat.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-background text-foreground">
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
